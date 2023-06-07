@@ -1,0 +1,53 @@
+.vans {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    padding: 2rem 3rem;
+}
+
+.van-tile {
+    width: 300px;
+    height: 350px;
+    margin: 2rem;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.van-tile img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.van-tile .van-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.van-tile h3 {
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.van-tile p {
+    font-size: 1rem;
+    color: #444;
+}
+
+.van-tile .van-type {
+    background-color: crimson;
+    padding: .4rem;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100px;
+}
