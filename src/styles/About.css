@@ -1,6 +1,33 @@
 .about {
-    height: 100vh;
     width: 100%;
-    display: grid;
-    place-items: center;
+    
+}
+
+.img-container {
+    max-width: 1020px;
+    width: 100%;
+    height: 450px;
+    margin: 0 auto;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-title {
+    font-size: 2.7rem;
+    text-align: center;
+    width: 50%;
+    margin: 2rem auto;
+}
+
+.info-about {
+    font-size: 1.5rem;
+    width: 70%;
+    margin: 0 auto;
+    line-height: 1.5;
+    color: #222;
+
 }

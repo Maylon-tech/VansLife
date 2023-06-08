@@ -1,0 +1,12 @@
+.navigation-layout {
+    margin: 2rem;
+    display: flex;
+    gap: 1.2rem;
+
+}
+
+.navigation-layout a {
+    text-decoration: none;
+    color: #222;
+    font-size: 1.2rem;
+}
