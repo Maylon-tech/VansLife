@@ -1,7 +1,6 @@
 import React from 'react'
 import '../styles/Home.css'
-import '../styles/Header.css'
-import heroImage from '../assets/images/home-hero.png'
+
 
 const Home = ({ name, age }) => {
   return (

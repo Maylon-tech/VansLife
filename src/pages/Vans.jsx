@@ -20,8 +20,9 @@ const Vans = () => {
     <div key={van.id} className='van-tile'>
 
       <Link to={`/vans/${van.id}`}>
-        
-        <img src={van.imgUrl}  alt='img' />
+        <div className='img-container'>
+          <img src={van.imgUrl}  alt='img' />
+        </div>
 
         <div className="van-info">
           <h3>{van.name}</h3>
