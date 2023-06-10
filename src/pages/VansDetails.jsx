@@ -6,9 +6,9 @@ import { vansData } from '../vanData'
 
 const VansDetails = () => {
     // const [vans, setVans] = useState(null)
-    const { productId } = useParams()
+    const { vanId } = useParams()
 
-    const singleVanDetail = vansData.find(van => van.id === parseInt(productId))
+    const singleVanDetail = vansData.find(van => van.id === parseInt(vanId))
     console.log(singleVanDetail)
   
     const { name, price, imgUrl, type, description } = singleVanDetail

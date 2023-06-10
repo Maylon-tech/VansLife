@@ -1,0 +1,41 @@
+
+.hostVans-list {
+    
+}
+
+.host-van-link-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.host-vans-single {
+    display: flex;
+    gap: 1.5rem;
+    width: 50%;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: bisque;
+    border-radius: 5px;
+}
+
+.host-vans-single img {
+    width: 180px;
+}
+
+.host-van-info {
+    margin-left: 2rem;
+}
+
+.host-van-info h3 {
+    font-size: 2rem;
+    color: #222;
+    
+}
+
+.host-van-info p {
+    font-size: 1.2rem;
+    color: #444;
+    letter-spacing: 1px;
+}

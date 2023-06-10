@@ -1,10 +1,59 @@
 import React from 'react'
+import { NavLink, useNavigate, useParams } from 'react-router-dom'
+
+import { vansData } from '../../vanData'
+
+
 
 const HostVansDetail = () => {
+  const { id } = useParams()
+  const navigate = useNavigate()
+  const vanDetail = vansData.find(van => van.id === parseInt(id))
+  console.log(vanDetail)
+
+  const { imgUrl, name, price, type } = vanDetail
+
   return (
-    <div>
-        <h2>This is the Host vans Detail</h2>
-    </div>
+    <section>
+        <button onClick={() => navigate('/host/vans')}>Back to all van</button>
+
+        <div className="container-detail">
+          <div className="van-info">
+            <div className="image">
+              <img src={imgUrl} alt="" />
+            </div>
+            <h2>{name}</h2>
+          </div>
+
+          <div className="van-info-navi">
+            <nav className='navigation-layout'>
+            <NavLink 
+              // style={({ isActive }) => isActive ? activeLink : null} 
+              to="/"
+              end
+            >
+              Details
+            </NavLink>
+
+            <NavLink 
+              // style={({ isActive }) => isActive ? activeLink : null} 
+              to="/"
+            >
+              Price
+            </NavLink>
+
+            <NavLink 
+              // style={({ isActive }) => isActive ? activeLink : null} 
+              to="/"
+            >
+             Photos
+            </NavLink>
+        </nav>
+
+        {/* <Outlet /> */}
+          </div>
+        </div>
+    </section>
   )
 }
 
