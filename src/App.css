@@ -2,3 +2,22 @@
   text-align: center;
 }
 
+.btn-back {
+  padding: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: #222;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+.btn-back:hover {
+  color: #444;
+  text-decoration: underline;
+}
+
+
+.container_default {
+  max-width: 1260px;
+  margin: 0 auto;
+}
