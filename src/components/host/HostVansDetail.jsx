@@ -1,27 +1,37 @@
 import React from 'react'
-import { NavLink, useNavigate, useParams } from 'react-router-dom'
+import { Link, NavLink, Outlet, useNavigate, useParams } from 'react-router-dom'
 
 import { vansData } from '../../vanData'
 import '../../styles/HostVansDetail.css'
 
 
 const HostVansDetail = () => {
+
   const { id } = useParams()
+
   const navigate = useNavigate()
+
   const vanDetail = vansData.find(van => van.id === parseInt(id))
   console.log(vanDetail)
 
   const { imgUrl, name, price, type } = vanDetail
 
+  const activeStyle = {
+    color: 'orange',
+    textDecoration: 'underline'
+  }
+
+
   return (
     <section className='container_default'>
       
-        <button 
-          className='btn-back'
-          onClick={() => navigate('/host/vans')}
+        <Link 
+          to='..'
+          relative="path"  
+          className='btn-back'          
         >
           &#8592; Back to all van
-        </button>
+        </Link>
 
         <div className="container-detail">
 
@@ -40,28 +50,31 @@ const HostVansDetail = () => {
             <nav className='navigation-layout'>
             <NavLink 
               // style={({ isActive }) => isActive ? activeLink : null} 
-              to="/"
+              to="."
               end
+              style={({ isActive }) => isActive ? activeStyle : null}
             >
               Details
             </NavLink>
 
             <NavLink 
               // style={({ isActive }) => isActive ? activeLink : null} 
-              to="/"
+              to="pricing"
+              style={({ isActive }) => isActive ? activeStyle : null}
             >
               Price
             </NavLink>
 
             <NavLink 
               // style={({ isActive }) => isActive ? activeLink : null} 
-              to="/"
+              to="photos"
+              style={({ isActive }) => isActive ? activeStyle : null}
             >
              Photos
             </NavLink>
         </nav>
 
-        {/* <Outlet /> */}
+        <Outlet /> 
           </div>
         </div>
     </section>

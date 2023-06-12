@@ -4,16 +4,14 @@
 
 .btn-back {
   padding: 1rem;
-  background: none;
-  border: none;
   font-size: 1.4rem;
   color: #222;
   cursor: pointer;
   transition: all .3s ease;
+  margin: 1.6rem 0;
 }
 .btn-back:hover {
   color: #444;
-  text-decoration: underline;
 }
 
 

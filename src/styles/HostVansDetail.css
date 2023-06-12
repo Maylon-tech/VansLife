@@ -1,11 +1,13 @@
 
 .container-detail {
     background-color: #eee;
+    margin-top: 2rem;
 }
 
 .van-info {
     display: flex;
     gap: 1.5rem;
+    border-radius: 6px;
 }
 
 .van-image {
