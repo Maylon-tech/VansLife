@@ -52,8 +52,84 @@
 
 }
 
+/* ----- -------- ----- -----*/
 
 
-.van-info-navi {
-    border: 2px solid crimson;
+.van-info-navi .navigation-layout {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.van-info-navi .navigation-layout a {
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem 2rem;
+    background-color: #eee;
+}
+.detail h1, .detail h2 {
+    color: #333;
+}
+.detail span {
+    font-weight: 400;
+    margin-left: .8rem;
+    color: #444;
+}
+.detail p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+
+/* ----- -------- ----- -----*/
+
+.pricing-content {
+    background-color: #eee;
+}
+
+.pricing-content .content-price {
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content-price h2 {
+    font-size: 1.8rem;
+    color: #222;
+}
+.content-price span {
+    font-size: 1.4rem;
+    color: #333;
+    margin-left: .8rem;
+}
+
+
+/* ----- -------- ----- -----*/
+.img-container {
+    display: flex;
+    gap: 1rem;
+    width: 60%;
+    height: 30%;
+    margin-left: 0;
+    background-color: #eee;
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
 }

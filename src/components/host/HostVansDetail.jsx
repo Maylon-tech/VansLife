@@ -6,25 +6,22 @@ import '../../styles/HostVansDetail.css'
 
 
 const HostVansDetail = () => {
-
   const { id } = useParams()
-
   const navigate = useNavigate()
 
   const vanDetail = vansData.find(van => van.id === parseInt(id))
-  console.log(vanDetail)
 
   const { imgUrl, name, price, type } = vanDetail
 
   const activeStyle = {
-    color: 'orange',
+    color: 'orangered',
     textDecoration: 'underline'
   }
 
 
   return (
     <section className='container_default'>
-      
+        
         <Link 
           to='..'
           relative="path"  
@@ -46,36 +43,38 @@ const HostVansDetail = () => {
             </div>
           </div>
 
-          <div className="van-info-navi">
+          <div className="van-info-navi">           
+
             <nav className='navigation-layout'>
-            <NavLink 
-              // style={({ isActive }) => isActive ? activeLink : null} 
-              to="."
-              end
-              style={({ isActive }) => isActive ? activeStyle : null}
-            >
-              Details
-            </NavLink>
+              <NavLink 
+                // style={({ isActive }) => isActive ? activeLink : null} 
+                to="."
+                end
+                style={({ isActive }) => isActive ? activeStyle : null}
+              >
+                Details
+              </NavLink>
 
-            <NavLink 
-              // style={({ isActive }) => isActive ? activeLink : null} 
-              to="pricing"
-              style={({ isActive }) => isActive ? activeStyle : null}
-            >
-              Price
-            </NavLink>
+              <NavLink 
+                // style={({ isActive }) => isActive ? activeLink : null} 
+                to="pricing"
+                style={({ isActive }) => isActive ? activeStyle : null}
+              >
+                Price
+              </NavLink>
 
-            <NavLink 
-              // style={({ isActive }) => isActive ? activeLink : null} 
-              to="photos"
-              style={({ isActive }) => isActive ? activeStyle : null}
-            >
-             Photos
-            </NavLink>
-        </nav>
-
-        <Outlet /> 
+              <NavLink 
+                // style={({ isActive }) => isActive ? activeLink : null} 
+                to="photos"
+                style={({ isActive }) => isActive ? activeStyle : null}
+              >
+                Photos
+              </NavLink>
+            </nav>
           </div>
+
+          <Outlet context={{ vanDetail }} /> 
+
         </div>
     </section>
   )
