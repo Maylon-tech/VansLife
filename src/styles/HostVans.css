@@ -1,32 +1,30 @@
 
-.hostVans-list {
-    border: 2px solid orangered;
-    max-width: 1100px;
-    display: flex;
-    justify-content: space-around;
+.hostVans-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 70%;
+    grid-gap: 1rem;
 }
 
+/*  Link - ancora */
 .host-van-link-wrapper {
-    width: 100%;
-display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
     padding: 1rem;
     text-decoration: none;   
-    display: block;
-    background-color: #222;
+    background-color: bisque;
+    display: flex;
+    justify-content: space-between;
+    
 }
 
 .host-vans-single {
     display: flex;
     gap: 1.5rem;
-    flex-direction: column;
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
     padding: 1.5rem;
-    background-color: bisque;
+    
     border-radius: 5px;
-     border: 2px solid orange;
+     
 }
 
 .host-vans-single img {
@@ -38,7 +36,7 @@ display: flex;
 }
 
 .host-van-info h3 {
-    font-size: 2rem;
+    font-size: 1.3rem;
     color: #222;
     
 }
@@ -47,4 +45,17 @@ display: flex;
     font-size: 1.2rem;
     color: #444;
     letter-spacing: 1px;
+}
+
+.btn-call {
+    padding: .8rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(238, 61, 7);
+    margin: auto;
+    color: #fff;
 }

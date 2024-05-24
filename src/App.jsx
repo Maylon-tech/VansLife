@@ -31,11 +31,10 @@ function App() {
           
           <Route path="host"  element={ <HostLayout />}> 
           
-            <Route index element={ <Dashboard />} />         
+            <Route index element={ <Dashboard />} />      {/* index porque ja comecao com dashboard */}   
             <Route path="income" element={ <Income />} />
             <Route path="reviews" element={ <Reviews />} />
             <Route path="vans" element={ <HostVans />} />
-
             <Route path="vans/:id" element={ <HostVansDetail />}>
               <Route index  element={ <Detail /> } />
               <Route path="pricing"  element={ <Pricing /> } />

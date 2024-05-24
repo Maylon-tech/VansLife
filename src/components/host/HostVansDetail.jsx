@@ -1,23 +1,19 @@
 import React from 'react'
-import { Link, NavLink, Outlet, useNavigate, useParams } from 'react-router-dom'
+import { Link, NavLink, Outlet, useParams } from 'react-router-dom'
 
 import { vansData } from '../../vanData'
 import '../../styles/HostVansDetail.css'
 
-
 const HostVansDetail = () => {
   const { id } = useParams()
-  const navigate = useNavigate()
 
   const vanDetail = vansData.find(van => van.id === parseInt(id))
 
   const { imgUrl, name, price, type } = vanDetail
-
   const activeStyle = {
     color: 'orangered',
     textDecoration: 'underline'
   }
-
 
   return (
     <section className='container_default'>

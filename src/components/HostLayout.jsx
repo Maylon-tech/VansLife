@@ -6,7 +6,6 @@ const HostLayout = () => {
   const activeLink = {
     fontWeight: 'bold',
     color: "orangered",
-    textDecoration: "underline",
   }
 
   return (

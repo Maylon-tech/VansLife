@@ -4,7 +4,6 @@ import { vansData } from '../vanData'
 import { Link } from 'react-router-dom'
 
 const Vans = () => {
-
     // useEffect(() => {
     //   fetch("/api/vans")
     //     .then(res => res.json())
@@ -14,9 +13,7 @@ const Vans = () => {
 
     // }, [])
 
-
   const vanElements = vansData.map(van => (
-
     <div key={van.id} className='van-tile'>
 
       <Link to={`/vans/${van.id}`}>
@@ -30,18 +27,12 @@ const Vans = () => {
         </div>
 
         <button className="van-type">{van.type}</button>
-
       </Link>
-
-
     </div>
-
   ))
-
 
   return (
     <div className='vans'>
-        
         {
           vanElements
         }

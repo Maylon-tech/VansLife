@@ -1,27 +1,22 @@
-
 .container-detail {
     background-color: #eee;
     margin-top: 2rem;
 }
-
 .van-info {
     display: flex;
     gap: 1.5rem;
     border-radius: 6px;
 }
-
 .van-image {
     width: 100%;
     height: 400px;
     flex: 1;
 }
-
 .van-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 .van-info-detail {
     flex: 1;
     display: flex;
@@ -30,7 +25,6 @@
     height: 90%;
     margin:  auto 0;
 }
-
 .van-info-detail .van-type {
     padding: .8rem;
     background-color: orangered;
@@ -40,20 +34,17 @@
     text-align: center;
     border-radius: 5px;
 }
-
 .van-info-detail .van-name {
     font-size: 3rem;
     color: #333;
 
 }
-
 .van-info-detail .van-price {
     font-size: 2rem;
 
 }
 
 /* ----- -------- ----- -----*/
-
 
 .van-info-navi .navigation-layout {
     width: 50%;
@@ -64,7 +55,6 @@
     font-size: 1.3rem;
     color: #333;
 }
-
 .detail {
     display: flex;
     flex-direction: column;
@@ -85,15 +75,12 @@
     line-height: 1.5;
 }
 
-
 /* ----- -------- ----- -----*/
 
-.pricing-content {
-    background-color: #eee;
-}
-
 .pricing-content .content-price {
-    width: 50%;
+    background-color: #fff;
+    width: 40%;
+    margin-left: 2rem;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -101,35 +88,31 @@
     align-items: center;
 }
 .content-price h2 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     color: #222;
 }
 .content-price span {
-    font-size: 1.4rem;
-    color: #333;
-    margin-left: .8rem;
+    font-size: 1.1rem;
+    color: orangered;
+   
 }
 
-
 /* ----- -------- ----- -----*/
+
 .img-container {
     display: flex;
-    gap: 1rem;
-    width: 60%;
-    height: 30%;
+    gap: 2rem;
     margin-left: 0;
     background-color: #eee;
 }
-
 .image {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     border-radius: 5px;
 }
-
 .image img {
     width: 100%;
     height: 100%;
     border-radius: 5px;
-    object-fit: cover;
+    object-fit: contain;
 }
