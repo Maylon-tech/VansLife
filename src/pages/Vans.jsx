@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/Vans.css'
 import { vansData } from '../vanData'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 
 const Vans = () => {
-    // useEffect(() => {
+
+    // useEffect(() => {    ONLY IF I USE API FOR FETCHING DATA.
     //   fetch("/api/vans")
     //     .then(res => res.json())
     //     .then(data => {
@@ -13,9 +14,20 @@ const Vans = () => {
 
     // }, [])
 
-  const vanElements = vansData.map(van => (
-    <div key={van.id} className='van-tile'>
+  const [searchParams, setSearchParams] = useSearchParams()
+  const [vans, setVans] = useState(vansData)
 
+
+  const typeFilter = searchParams.get("type")
+  console.log(typeFilter)
+
+  const displayedVans = typeFilter  
+    ? Vans.filter(van => van.type === typeFilter)
+    : vans
+
+  const vanElements = displayedVans.map(van => (
+    <div key={van.id} className='van-tile'>
+      
       <Link to={`/vans/${van.id}`}>
         <div className='img-container'>
           <img src={van.imgUrl}  alt='img' />
@@ -32,11 +44,14 @@ const Vans = () => {
   ))
 
   return (
-    <div className='vans'>
-        {
-          vanElements
-        }
-    </div>
+    <>
+      <h1 className='vans-title'>Explore our van options</h1>
+      <div className='vans'>
+          {
+            vanElements
+          }
+      </div>
+    </>
   )
 }
 

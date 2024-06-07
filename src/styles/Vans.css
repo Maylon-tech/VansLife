@@ -5,6 +5,12 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
+.vans-title {
+    text-align: center;
+    padding: 1.2rem;
+    margin-bottom: 1.4rem;
+}
+
 .van-tile {
     width: 270px;
     height: 300px;

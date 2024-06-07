@@ -9,7 +9,6 @@ const VansDetails = () => {
     const { vanId } = useParams()
 
     const singleVanDetail = vansData.find(van => van.id === parseInt(vanId))
-    console.log(singleVanDetail)
   
     const { name, price, imgUrl, type, description } = singleVanDetail
     // setVans(singleVanDetail)
